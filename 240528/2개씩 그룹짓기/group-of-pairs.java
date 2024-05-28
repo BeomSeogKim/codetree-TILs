@@ -13,7 +13,7 @@ public class Main {
         Arrays.sort(intArr);
 
         int max = 0; 
-        for (int i = 0; i < (n / 2); i++){
+        for (int i = 0; i <= (n / 2); i++){
             int sum = intArr[i] + intArr[n - 1 - i];
             max = Math.max(sum, max);
         }
