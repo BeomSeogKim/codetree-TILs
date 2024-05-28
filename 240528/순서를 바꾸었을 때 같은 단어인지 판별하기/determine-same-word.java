@@ -5,6 +5,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String str1 = sc.next();
         String str2 = sc.next();
+        if (str1.length() != str2.length()){
+            System.out.println("No");
+            return;
+        }
         char[] chars1 = str1.toCharArray();
         char[] chars2 = str2.toCharArray();
         Arrays.sort(chars1);
