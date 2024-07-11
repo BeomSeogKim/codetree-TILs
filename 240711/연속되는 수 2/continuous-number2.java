@@ -12,10 +12,10 @@ public class Main {
             if (prev == now) {
                 cnt++;
             } else {
-                maxCnt = Math.max(maxCnt, cnt);
                 prev = now;
                 cnt = 1;
             }
+            maxCnt = Math.max(maxCnt, cnt);
         }
         System.out.println(maxCnt);
     }
