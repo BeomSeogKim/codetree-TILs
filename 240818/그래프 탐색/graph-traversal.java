@@ -27,7 +27,7 @@ public class Main {
     }
 
     public static void DFS(int curV) {
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i <= N; i++) {
             if (!visited[i] && graph[curV][i]){
                 countOfNearVertex++;
                 visited[i] = true;
