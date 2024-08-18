@@ -21,13 +21,14 @@ public class Main {
             graph[row][col] = true;
             graph[col][row] = true;
         }
+        visited[1] = true;
         DFS(1);
         System.out.println(countOfNearVertex);
     }
 
     public static void DFS(int curV) {
         for (int i = 0; i < N; i++) {
-            if (!visited[curV] && graph[curV][i]){
+            if (!visited[i] && graph[curV][i]){
                 countOfNearVertex++;
                 visited[i] = true;
                 DFS(i);
