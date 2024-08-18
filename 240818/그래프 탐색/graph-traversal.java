@@ -11,17 +11,17 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
         int M = sc.nextInt();
-        visited = new boolean[N];
-        graph = new boolean[N][N];
+        visited = new boolean[N + 1];
+        graph = new boolean[N + 1][N + 1];
 
         for(int i = 0; i < M; i++){
-            int row = sc.nextInt() - 1;
-            int col = sc.nextInt() - 1;
+            int row = sc.nextInt();
+            int col = sc.nextInt();
 
             graph[row][col] = true;
             graph[col][row] = true;
         }
-        DFS(0);
+        DFS(1);
         System.out.println(countOfNearVertex);
     }
 
