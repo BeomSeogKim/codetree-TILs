@@ -26,6 +26,7 @@ public class Main {
         
         if (visited[rowSize - 1][colSize - 1]) {
             System.out.println(1);
+            return;
         }
         
         System.out.println(0);
