@@ -37,7 +37,7 @@ public class Main {
         for(int d = 0; d < 2; d++) {
             int nRow = row + dx[d];
             int nCol = col + dy[d];
-            if(nRow >= 0 && nRow < visited.length && nCol >= 0 && nCol < visited[0].length && !visited[nRow][nCol]) {
+            if(nRow >= 0 && nRow < visited.length && nCol >= 0 && nCol < visited[0].length && !visited[nRow][nCol] && grid[nRow][nCol] == 1) {
                 visited[nRow][nCol] = true;
                 DFS(nRow,nCol);
             }
