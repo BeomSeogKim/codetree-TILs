@@ -21,22 +21,23 @@ public class Main {
                 grid[row][col] = sc.nextInt();
             }
         }
+        visited[0][0] = true;
         DFS(0,0);
         
         if (visited[rowSize - 1][colSize - 1]) {
             System.out.println(1);
         }
-
+        
         System.out.println(0);
     }
 
     static void DFS(int row, int col) {
-        visited[row][col] = true;
         
         for(int d = 0; d < 2; d++) {
             int nRow = row + dx[d];
             int nCol = col + dy[d];
             if(nRow >= 0 && nRow < visited.length && nCol >= 0 && nCol < visited[0].length && !visited[nRow][nCol]) {
+                visited[nRow][nCol] = true;
                 DFS(nRow,nCol);
             }
         }
