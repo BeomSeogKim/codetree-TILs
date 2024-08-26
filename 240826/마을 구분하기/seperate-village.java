@@ -54,7 +54,7 @@ public class Main {
             int newCol = col + dy[d];
             int size = grid.length;
             if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size ) {
-                if (Objects.equals(grid[newRow][newCol], 1) && !visited[newRow][newCol]) {
+                if (grid[newRow][newCol] == 1 && !visited[newRow][newCol]) {
                     visited[newRow][newCol] = true;
                     return DFS(newRow, newCol) + 1;
                 }
