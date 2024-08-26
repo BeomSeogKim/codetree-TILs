@@ -31,6 +31,7 @@ public class Main {
         for(int row = 0; row < size; row++) {
             for(int col = 0; col < size; col++) {
                 if (grid[row][col] == 1 && !visited[row][col]) {
+                    visited[row][col] = true;
                     int neighbor = DFS(row, col);
                     peoples.add(neighbor);
                 }
@@ -47,7 +48,6 @@ public class Main {
     }
 
     static int DFS(int row, int col){
-        visited[row][col] = true;
 
         for(int d = 0; d < 4; d++){
             int newRow = row + dx[d];
@@ -55,6 +55,7 @@ public class Main {
             int size = grid.length;
             if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size ) {
                 if (Objects.equals(grid[newRow][newCol], 1) && !visited[newRow][newCol]) {
+                    visited[newRow][newCol] = true;
                     return DFS(newRow, newCol) + 1;
                 }
             }
