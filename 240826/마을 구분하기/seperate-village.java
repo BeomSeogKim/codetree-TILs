@@ -48,14 +48,14 @@ public class Main {
     }
 
     static int DFS(int row, int col){
-
+        visited[row][col] = true;
+        
         for(int d = 0; d < 4; d++){
             int newRow = row + dx[d];
             int newCol = col + dy[d];
             int size = grid.length;
             if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size ) {
                 if (grid[newRow][newCol] == 1 && !visited[newRow][newCol]) {
-                    visited[newRow][newCol] = true;
                     return DFS(newRow, newCol) + 1;
                 }
             }
